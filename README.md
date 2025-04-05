@@ -27,13 +27,9 @@ The project was inspired by the official [Flutter Todos Tutorial](https://blocli
 - Multi-language support
 - Environment-specific configurations
 
-## Getting Started
 
-### Prerequisites
 
-- Flutter SDK (latest stable version)
-- Dart SDK
-- Android Studio / VS Code with Flutter extensions
+
 
 ### Installation
 
@@ -110,17 +106,6 @@ This application follows a layered architecture:
 - **Domain Layer**: Business logic and entities
 - **Data Layer**: Data sources, repositories, and models
 
-## Libraries & Tools
 
-- [flutter_bloc](https://pub.dev/packages/flutter_bloc) - State management
-- [sqflite](https://pub.dev/packages/sqflite) - SQLite database
-- [intl](https://pub.dev/packages/intl) - Localization
-- [path_provider](https://pub.dev/packages/path_provider) - File system access
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Specify your license here]
