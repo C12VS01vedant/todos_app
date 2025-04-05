@@ -1,16 +1,126 @@
-# todos
+# Flutter Todos
 
-A new Flutter project.
+A modern Flutter todo-list application implementing layered architecture with BLoC state management.
+
+## Overview
+
+This application showcases best practices for Flutter development including:
+- Layered architecture
+- BLoC pattern for state management
+- Custom packages
+- Local database integration
+- Internationalization
+- Flavor configurations for different environments
+
+The project was inspired by the official [Flutter Todos Tutorial](https://bloclibrary.dev/tutorials/flutter-todos/).
+
+## Screenshots
+
+[Consider adding screenshots of your app here]
+
+## Features
+
+- Create, read, update, and delete todos
+- Mark todos as completed
+- Filter todos by status
+- Persistent storage using local database
+- Multi-language support
+- Environment-specific configurations
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK (latest stable version)
+- Dart SDK
+- Android Studio / VS Code with Flutter extensions
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/todos.git
+   cd todos
+   ```
+
+2. Install dependencies
+   ```bash
+   flutter pub get
+   ```
+
+3. Update package versions if necessary
+
+4. Generate required files
+   ```bash
+   # Generate code for packages and models
+   dart pub run build_runner build --delete-conflicting-outputs
+   
+   # Generate localization files
+   flutter gen-l10n
+   ```
+
+### Running the App
+
+Run the application using the appropriate flavor:
+
+```bash
+# Development
+flutter run --flavor development --target lib/main_development.dart
+
+# Staging
+flutter run --flavor staging --target lib/main_staging.dart
+
+# Production
+flutter run --flavor production --target lib/main_production.dart
+```
+
+### Testing
+
+Run the test suite with:
+
+```bash
+flutter test --coverage --test-randomize-ordering-seed random
+```
+
+## APK
+
+A prebuilt APK is available at:
+```
+build/app/outputs/flutter-apk/app-release.apk (21.1MB)
+```
+
+## Project Structure
+
+```
+lib/
+  ├── app/                  # Application layer
+  ├── domain/               # Domain/business logic layer
+  ├── data/                 # Data layer
+  ├── presentation/         # UI layer
+  ├── l10n/                 # Localization
+  ├── main_development.dart # Entry point for development
+  ├── main_staging.dart     # Entry point for staging
+  ├── main_production.dart  # Entry point for production
+```
+
+## Architecture
+
+This application follows a layered architecture:
+- **Presentation Layer**: UI components and BLoC state management
+- **Domain Layer**: Business logic and entities
+- **Data Layer**: Data sources, repositories, and models
+
+## Libraries & Tools
+
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) - State management
+- [sqflite](https://pub.dev/packages/sqflite) - SQLite database
+- [intl](https://pub.dev/packages/intl) - Localization
+- [path_provider](https://pub.dev/packages/path_provider) - File system access
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[Specify your license here]
